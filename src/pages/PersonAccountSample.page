@@ -1,0 +1,24 @@
+<apex:page controller="PersonAccountSampleController" showHeader="true" sidebar="true" tabStyle="Account">
+    <div id="vf-page">
+        <apex:sectionHeader title="Force.com" subtitle="Person Acccount App Sample" />
+        <apex:form id="form">
+            <apex:pageMessages id="form" />
+            <apex:pageBlock mode="edit" id="block">
+                <apex:pageBlockButtons location="bottom" id="buttons">
+                    <apex:commandButton value=" Save " id="saveBtn" action="{!doSave}" reRender="form" />
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Account Info" id="sectionAccount">
+                    <apex:inputField value="{!personAccount.AccountNumber}" />
+                    <apex:inputField value="{!personAccount.Phone}" />
+                    <apex:inputField value="{!personAccount.Website}" />
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Contact Info" id="sectionContact">
+                    <apex:inputField value="{!contact.LastName}" />
+                    <apex:inputField value="{!contact.FirstName}" />
+                    <apex:inputField value="{!personAccount.PersonBirthdate}" />
+                    <apex:inputField value="{!personAccount.PersonEmail}" />
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+    </div>
+</apex:page>
